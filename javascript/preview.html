@@ -16,25 +16,29 @@
             }
 
         }
-
-        body{
-            font-family: 'Palette Mosaic', cursive;
-        }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
 </head>
 <body>
-    <input type="button" value="night" onclick="
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-    ">
-    <input type="button" value="day" onclick="
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-    ">
     <h1><a href="index.html">WEB</a></h1>
+    <input type="button" value="night" onclick="
+        if(this.value === 'night'){
+            document.querySelector('body').style.color='white';
+            document.querySelector('body').style.backgroundColor='black';
+            let as = document.querySelectorAll('a');
+            for(let i=0; i<as.length; i++){
+                as[i].style.color='white';
+            }
+            this.value = 'day';
+        } else {
+            document.querySelector('body').style.color='black';
+            document.querySelector('body').style.backgroundColor='white';
+            let as = document.querySelectorAll('a');
+            for(let i=0; i<as.length; i++){
+                as[i].style.color='black';
+            }
+            this.value = 'night';
+        }
+    ">
     <div id="container">
         <ol>  
             <li><a href="1.html">html</a></li>
