@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+        <h1>배열(Array)</h1>
+        <script>
+            let topic1 = 'html';
+            let member1 = 'egoing';
+            let topic2 = 'css';
+            let member2 = 'leezche';
+            let topic3 = 'js';
+            let member3 = 'duru';
+
+            let topics = ['html', 'css', 'js'];
+            let members = ['egoing', 'leezche', 'duru'];
+            console.log(topics.length);
+            console.log(topics[0]);
+        </script>
+
+        <h1>반복문(Loop)</h1>
+        <script>
+            console.log(1);
+            for(let i=0; i<2 ;i=i+1){
+                console.log(2);
+                console.log(3);
+            }
+            console.log(4);            
+        </script>
+
+        <h1>Array + Loop</h1>
+        <script>
+            topics = ['html', 'css', 'js'];
+            for(let i=0; i<topics.length; i=i+1){
+                document.write('<li>'+topics[i]+'</li>');
+            }
+        </script>
+    </body>
+</html>

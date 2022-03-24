@@ -3,43 +3,40 @@
 <head>
     <title>WEB</title>
     <meta charset="utf-8">
-    <style>
-        h1{
-            border-bottom:10px solid red;
-            padding:30px;
-        }
-        
-        @media all and (min-width: 480px){ 
-            #container{
-                display:grid;
-                grid-template-columns: 150px 1fr;
-            }
-
-        }
-
-        body{
-            font-family: 'Palette Mosaic', cursive;
-        }
-    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <input type="button" value="night" onclick="
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
+        let btn = this;
+        if(btn.value === 'night'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            btn.value = 'day';
+            document.querySelector('#a1').style.color = 'white';
+            document.querySelector('#a2').style.color = 'white';
+            document.querySelector('#a3').style.color = 'white';
+            document.querySelector('#a4').style.color = 'white';
+        } else {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            btn.value = 'night';
+            document.querySelector('#a1').style.color = 'black';
+            document.querySelector('#a2').style.color = 'black';
+            document.querySelector('#a3').style.color = 'black';
+            document.querySelector('#a4').style.color = 'black';
+        }
     ">
-    <input type="button" value="day" onclick="
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-    ">
-    <h1><a href="index.html">WEB</a></h1>
+
+    <h1><a id="a1" href="index.html">WEB</a></h1>
     <div id="container">
         <ol>  
-            <li><a href="1.html">html</a></li>
-            <li><a href="2.html">css</a></li>
-            <li><a href="3.html">JavaScript</a></li>
+            <li><a id="a2"  href="1.html">html</a></li>
+            <li><a id="a3"  href="2.html">css</a></li>
+            <li><a id="a4"  href="3.html">JavaScript</a></li>
         </ol>
         <div>
             <h2>Welcome!</h2> 
