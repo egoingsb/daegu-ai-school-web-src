@@ -43,5 +43,81 @@
             부가가치세 = 0.1
             alert(가격*부가가치세)
         </script>
+        <h1>Boolean & comparison operator</h1>
+        <script>
+            console.log(true);
+            console.log(false);
+            console.log(1===1); // true
+            console.log(1===2); // false
+            console.log(1>2); //false
+            console.log(1<2); //true
+        </script>
+        <h1>Conditional Statements</h1>
+        <script>
+            console.log(1);
+            if(true){
+                console.log(2);
+                console.log(3);
+            }
+            console.log(4);
+
+
+            console.log(1);
+            if(false){
+                console.log(2);
+                console.log(3);
+            }
+            console.log(4);
+
+            console.log(1);
+            if(true){
+                console.log(2.1);
+                console.log(3.1);
+            } else {
+                console.log(2.2);
+                console.log(3.3);
+            }
+            console.log(4);
+
+            console.log(1);
+            if(false){
+                console.log(2.1);
+                console.log(3.1);
+            } else {
+                console.log(2.2);
+                console.log(3.2);
+            }
+            console.log(4);
+        </script>
+        <h1>Login</h1>
+        <input type="button" value="login" onclick="
+            let input_id = prompt('아이디를 입력해주세요');
+            if(input_id === 'egoing'){
+                alert('안녕하세요')
+            } else {
+                alert('뉘슈?')
+            }
+        ">
+        <h1>Loop</h1>
+        <script>
+            member = ['egoing', 'duru'];
+            for(let i=0; i<member.length; i=i+1){
+                document.write('<li>'+member[i]+'</li>');
+            }
+
+            member = {name:'egoing', city:'seoul'}
+        </script>
+        <h1>Function</h1>
+        <script>
+            function sum(left, right){
+                return left+right;
+            }
+            console.log(sum(10,20));
+        </script>
+        <h1>실습</h1>
+        <input type="button" value="부가세계산기" onclick="
+            let 가격 = Number(prompt('가격?'));
+            alert(가격 * 0.1);
+        ">
     </body>
 </html>
